@@ -1,0 +1,15 @@
+<div class="card">
+  <h2>{{ weatherData.name }}</h2>
+  <h3>
+    {{ weatherData.weather[0].main
+    }}<span>Wind {{ weatherData.wind.speed }}km/h</span>
+  </h3>
+  <h1>{{ weatherData.main.temp }}K</h1>
+  <img
+    class="weather_image"
+    [src]="
+      'http://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png'
+    "
+    alt=""
+  />
+</div>

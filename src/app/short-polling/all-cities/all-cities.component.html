@@ -1,0 +1,9 @@
+<div class="weather__content">
+  <div class="card__section">
+    <app-single-city
+      class="weather_card_component"
+      *ngFor="let weatherData of cities$ | async"
+      [weatherData]="weatherData"
+    ></app-single-city>
+  </div>
+</div>

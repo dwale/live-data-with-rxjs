@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap");
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.weather_card_component {
+  margin: 1%;
+  cursor: pointer;
+}
+
+.weather__content {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+.card__section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2%;
+}
