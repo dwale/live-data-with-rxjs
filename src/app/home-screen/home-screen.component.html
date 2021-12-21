@@ -1,0 +1,36 @@
+<div class="card__content">
+  <div class="card__section">
+    <div class="card" routerLink="../short-polling">
+      <h2>Short Polling</h2>
+
+      <h5>
+        The client sends a request to a server and it gets a response from the
+        server which could be either be an empty response or probably a json
+        response . In short polling this request is made in intervals
+      </h5>
+    </div>
+
+    <div class="card">
+      <h2>Long Polling</h2>
+
+      <h5>
+        The client makes a request to a resource which is usually a server , if
+        there is data for the server to return , it is returned and the
+        connection is closed but if there’s no data , it still keeps the
+        connection open until there is data available for it to send
+      </h5>
+    </div>
+
+    <div class="card">
+      <h2>Web Sockets</h2>
+
+      <h5>
+        Its a bit similar to long polling in a sense that a connection is always
+        open between the client and the resource but once that connection is
+        setup the Server passes messages to the client by sending data events to
+        the client, the communication here is also bi-directional as the client
+        can also send messages to the resource
+      </h5>
+    </div>
+  </div>
+</div>

@@ -25,9 +25,8 @@ export class SPollingService {
   constructor(private httpClient: HttpClient) {}
 
   public getWeatherData(): Observable<Weather[]> {
-    return timer(1, 10000).pipe(
+    return timer(1, 3000).pipe(
       switchMap(() => this.fetchWeathers()),
-      retry(2),
       takeUntil(this.endSubs$)
     );
   }

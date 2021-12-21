@@ -6,15 +6,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ShortPollingModule } from './short-polling/short-polling.module';
 import { AppRoutingModule } from './app.routing.module';
+import { RouterModule } from '@angular/router';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeScreenComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     HighchartsChartModule,
     ShortPollingModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
