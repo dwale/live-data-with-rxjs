@@ -8,6 +8,8 @@ import { ShortPollingModule } from './short-polling/short-polling.module';
 import { AppRoutingModule } from './app.routing.module';
 import { RouterModule } from '@angular/router';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
+import { WebSocketModule } from './web-socket/web-socket.module';
+import { LongPollingModule } from './long-polling/long-polling.module';
 
 @NgModule({
   declarations: [AppComponent, HomeScreenComponent],
@@ -18,6 +20,8 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
     HighchartsChartModule,
     ShortPollingModule,
     RouterModule,
+    WebSocketModule,
+    LongPollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -13,6 +13,18 @@ const routes: Routes = [
         (m) => m.ShortPollingModule
       ),
   },
+  {
+    path: 'long-polling',
+    loadChildren: () =>
+      import('./long-polling/long-polling.module').then(
+        (m) => m.LongPollingModule
+      ),
+  },
+  {
+    path: 'web-sockets',
+    loadChildren: () =>
+      import('./web-socket/web-socket.module').then((m) => m.WebSocketModule),
+  },
 ];
 
 @NgModule({

@@ -1,17 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, from, timer, of } from 'rxjs';
-import { Subject } from 'rxjs/internal/Subject';
-import {
-  concatMap,
-  exhaustMap,
-  mergeMap,
-  retry,
-  switchMap,
-  takeUntil,
-  tap,
-  toArray,
-} from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { Observable, from, timer } from 'rxjs';
+import { concatMap, switchMap, takeUntil, tap, toArray } from 'rxjs/operators';
 import { Weather } from './weather';
 
 const KEY = 'aa7bb6ab12341d578e32118c3e01c669';
@@ -46,7 +37,6 @@ export class SPollingService {
   }
 
   ngOnDestroy() {
-    this.endSubs$.next();
-    this.endSubs$.complete();
+    this.endSubs$.unsubscribe();
   }
 }
